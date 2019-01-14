@@ -690,6 +690,7 @@ button.btn.btn-info {
 #mail:hover {
   animation : animaMail 1.2s;
   animation-iteration-count: infinite;
+  cursor: pointer;
 }
 
 @keyframes animaMail {
