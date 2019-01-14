@@ -1,0 +1,779 @@
+
+/*header {
+  width: 100%;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+header, img {
+  width: 100%;
+}
+*/
+
+.name {
+  width: 90%;
+  height: 600px;
+  background : url(name.png);
+  position: relative;
+  background-size: fill;
+  z-index: 200;
+}
+
+#name:hover {
+  cursor: pointer;
+}
+
+
+.name:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 600px;
+  opacity: 1;
+  background: url(name.png);
+  background-position: 0 0;
+  animation : animate .4s 0.5s;
+  animation-iteration-count: 2;
+  opacity: 0.5;
+}
+
+.layer1 {
+  width: 100%;
+  height: 100vh;
+  background : url(layer1.png);
+  position: relative;
+}
+
+
+.layer1:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  background: url(layer1.png);
+  background-position: 0 0;
+  animation : animated .4s;
+  animation-iteration-count: 0;
+  opacity: 0.5;
+}
+.layer2 {
+  width: 100%;
+  height: 100vh;
+  background : url(layer2.png);
+  position: relative;
+}
+
+
+.layer2:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  background: url(layer2.png);
+  background-position: 0 0;
+  animation : animated .4s;
+  animation-iteration-count: 0;
+  opacity: 0.5;
+  z-index: 100;
+}
+
+.layer3 {
+  width: 100% !important;
+  height: 100vh;
+  background : url(layer3.png);
+  position: relative;
+}
+
+
+.layer3:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100vh;
+  opacity: 1;
+  background: url(layer3.png);
+  background-position: 0 0;
+  animation : animated .4s;
+  animation-iteration-count: 0;
+  opacity: 0.5;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+    opacity: 0.7;
+  }
+  10% {
+    background-position: 10px 0;
+    opacity: 0.7;
+    background: url(name-glitch.png);
+  }
+  20% {
+    background-position: -10px 0;
+  }
+  30% {
+    background-position: 4px 0;
+    opacity: 0.7;
+  }
+  40% {
+    background-position: -4px 0;
+    /*background: url(name-glitch.png);*/
+  }
+  50% {
+    background-position: 0 10px;
+    opacity: 0.7;
+  }
+  60% {
+    background-position: 1px 0;
+  }
+  70% {
+    background-position: 0 0;
+  }
+  80% {
+    background-position: 0 -1px;
+  }
+  90% {
+    background-position: 0 1px;
+  }
+}
+
+@keyframes animated {
+  0% {
+    background-position: 0 0;
+    opacity: 0.7;
+  }
+  10% {
+    background-position: -15px 0;
+    opacity: 0.7;
+  }
+  20% {
+    background-position: 15px 0;
+  }
+  30% {
+    background-position: 7px 5px;
+    opacity: 0.7;
+  }
+  40% {
+    background-position: -7px 0;
+  }
+  50% {
+    background-position: 0 10px;
+    opacity: 0.7;
+  }
+  60% {
+    background-position: 4px 0;
+  }
+  70% {
+    background-position: -2px 0;
+  }
+  80% {
+    background-position: 0 -1px;
+  }
+  90% {
+    background-position: 0 1px;
+  }
+}
+
+.banner {
+  background-color: black;
+  background-size: cover;
+  height: 100vh;
+  width: 100% !important;
+  position: relative;
+  z-index: 20;
+  margin: auto;
+  vertical-align: bottom;
+}
+
+.banner img {
+  width: 100% !important;
+}
+
+.first-card {
+  background-color: black;
+  background-size: cover;
+  height: 100vh;
+  width: 100% !important;
+  /*position: relative;*/
+  z-index: 1;
+  margin: auto;
+  vertical-align: bottom;
+  /*border: solid 2px white;*/
+}
+
+.second-card {
+  background-color: black;
+  background-size: cover;
+  height: 100vh;
+  width: 100% !important;
+  /*position: relative;*/
+  z-index: 1;
+  margin: auto;
+  vertical-align: bottom;
+  border: solid 2px black;
+}
+
+.cv-container {
+  /*position: absolute;*/
+  background-color: black;
+  top: 100vh;
+  display: flex;
+  flex-direction: column;
+  /*border: solid 0.5px;*/
+  /*border-radius: 5px;*/
+  padding: 20px 10px 10px 10px;
+  width: 100%;
+}
+
+.top-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  border: solid 0.5px;
+  border-radius: 5px;
+  border-color: red;
+  margin: 4px;
+  /*background-color: white;*/
+}
+
+.summary {
+  flex: 4;
+  width: 400px;
+  /*border: solid 0.5px;*/
+  border-radius: 5px;
+  margin: 4px;
+  padding-left: 16px;
+}
+
+.summary>h5 {
+  color: grey;
+}
+
+.avatar {
+  flex: 1;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*border: solid 0.5px;*/
+  border-radius: 5px;
+  margin: 4px;
+}
+
+.avatar-icon>img {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  border: solid 6px white;
+  /*box-shadow: 0px 2px 0px #aaa;*/
+}
+
+.links {
+  border: solid 0.5px;
+  border-radius: 5px;
+  margin: 4px;
+}
+
+.bottom-infos {
+  display: flex;
+  flex-direction: column;
+  /*border: solid 0.5px;*/
+  border-radius: 5px;
+  margin: 24px;
+  background-color: rgba(160,160,160,0.8);
+  border: solid 2px white;
+}
+
+.bottom-infos>h1 {
+  text-align: center;
+}
+
+.contact {
+  text-align: center;
+  margin: 10px;
+  /*background-color: white;*/
+  font-size: 20px;
+  /*border: solid 1px black;*/
+  padding: 10px;
+  width: 500px;
+  display: inline-block;
+  border-radius: 10px;
+  background: linear-gradient(230deg, #CBCBCB, white);
+  box-shadow: 0px 2px 0px #CBCBCB
+}
+
+.skills-hobbies {
+  display: block;
+  text-align: center;
+  margin: 4px;
+  /*background-color: white;*/
+  font-size: 20px;
+}
+
+.skills-interests {
+  display: block;
+  text-align: center;
+  margin: 4px;
+  /*background-color: white;*/
+  font-size: 20px;
+}
+
+.skills-interests>img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.skills-hobbies>img {
+  height: 60px;
+  width: 60px;
+  border-radius: 30%;
+}
+
+.experiences {
+  flex: 3;
+  /*border: solid 0.5px;*/
+  border-radius: 5px;
+  padding-left: 48px;
+  padding-right: 48px;
+  margin: 20px 60px 60px 60px;
+  background-color: white;
+}
+
+.infos {
+  flex: 1;
+  /*border: solid 0.5px;*/
+  border-radius: 5px;
+  padding-left: 16px;
+  margin: 20px 60px 60px 60px;
+  background-color: white;
+  padding-bottom: 10px;
+  text-align: center;
+
+  /*margin: 0 auto;*/
+}
+
+.experiences>h3 {
+}
+
+button.btn.btn-info {
+  margin: 3px;
+}
+
+.exp-card>h4 {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 24px;
+}
+
+.experiences-list>span {
+  color: grey;
+}
+
+.more_infos.close {
+  transform: rotate(45deg);
+}
+
+.toggle-1 {
+  display: none;
+}
+.toggle-1.show {
+  display: contents;
+  color: grey;
+  margin-left: 8px;
+}
+.toggle-2 {
+  display: none;
+}
+.toggle-2.show {
+  display: contents;
+  color: grey;
+  margin-left: 8px;
+}
+.toggle-3 {
+  display: none;
+}
+.toggle-3.show {
+  display: contents;
+  color: grey;
+  margin-left: 8px;
+}
+.toggle-4 {
+  display: none;
+}
+.toggle-4.show {
+  display: contents;
+  color: grey;
+  margin-left: 8px;
+}
+.toggle-5 {
+  display: none;
+}
+.toggle-5.show {
+  display: contents;
+  color: grey;
+  margin-left: 8px;
+}
+.toggle-6 {
+  display: none;
+}
+.toggle-6.show {
+  display: contents;
+  color: grey;
+  margin-left: 8px;
+}
+
+.more_infos {
+  cursor: pointer;
+}
+
+.exp-card {
+  margin-right: 16px;
+  border-top :solid 0.5px;
+  border-color: rgba(160, 160, 160, 0.5);
+}
+
+#clickable {
+  /*position: absolute;
+  bottom: 0;
+  right: 0;*/
+  font-size: 40px;
+  position: fixed;
+  top: 30px;
+  z-index: 1000;
+}
+
+.skills-description {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  /*flex-wrap: wrap;*/
+  flex-direction: row;
+  /*border: solid 1px white;*/
+  margin: 10px;
+  padding-left: 20px;
+  justify-content: space-between;
+}
+
+.skills-card {
+  height: 50px;
+  width: 50%;
+  padding: 10px;
+}
+
+.skills-card>img {
+  height: 100px;
+  width: 200px;
+  margin: auto;
+}
+
+.skills-card.python>img {
+  height: 70px;
+  width: 200px;
+  margin: auto;
+}
+
+/*.skills-card.parallax>img {
+  height: 140px;
+  width: 180px;
+  /*padding-bottom: 40px;*/
+
+.my-skills {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  /*height: 60vh;*/
+  height: 500px;
+  border: solid 2px white;
+  margin: auto;
+  border-radius: 5px;
+  padding-left: 50px;
+  padding-top: 30px;
+  background-color: rgba(160,160,160,0.8);
+  justify-content: space-around;
+}
+
+.chart {
+  flex: 1;
+  /*height: 60vh;*/
+  height: 500px;
+  border: solid 2px white;
+  margin: auto;
+  border-radius: 5px;
+  background-color: rgba(160,160,160,0.8);
+  padding-top: 30px;
+}
+
+#myChart.chartjs-render-monitor {
+    margin-top: 0px;
+    /*height: 800px;*/
+  }
+
+
+@media (max-width: 1300px) {
+  #myChart.chartjs-render-monitor {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .chart {
+    vertical-align: center
+  }
+  #myChart {
+    transform: scale(0.9);
+  }
+  #myChart.chartjs-render-monitor {
+    margin-top: 80px;
+  }
+  .my-skills {
+    padding-left: 0px;
+    padding-top: 30px;
+  }
+  .skills-card {
+    transform: scale(0.8);
+  }
+  .skills-card>img {
+    transform: scale(0.8);
+  }
+  .skills-card.python>img {
+    transform: scale(0.8);
+  }
+}
+
+.about {
+  /*height: 60vh;*/
+  height: 500px;
+  width: 98%;
+  border: solid 2px white;
+  margin: auto;
+  border-radius: 5px;
+  background-color: rgba(160,160,160,0.8);
+  padding-top: 10px;
+  text-align: center;
+}
+
+.my-description {
+/*  margin-top: 10px;
+  padding: 10px;*/
+}
+
+.text-animated {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+.hr {
+  width: 10%;
+}
+
+.net-logo>img {
+  height: 40px;
+  width: 40px;
+}
+
+.logo-fb {
+  height: 50px !important;
+  width: 50px !important
+}
+
+.logo-linkedin {
+  height: 50px !important;
+  width: 50px !important
+}
+
+.net-logo {
+  display: inline;
+}
+
+#arrow-fixed-top {
+  position: fixed;
+  bottom: 133px;
+  right: 56px;
+  z-index: 1;
+}
+
+#arrow-fixed-bottom {
+  position: fixed;
+  bottom: 71px;
+  right: 56px;
+  z-index: 100;
+}
+
+@keyframes animaTop {
+  0% {
+    transform: scale(1);  }
+  50% {
+    transform: scale(1.05)  }
+}
+
+
+@keyframes animaDown {
+  0% {
+    transform: scale(1)  }
+  50% {
+    transform: scale(1.05)  }
+}
+
+#circleTop {
+  position: fixed;
+  bottom: 124;
+  right: 44;
+  z-index: 100;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: solid 2px red;
+  z-index: 1;
+  animation : animaTop 1.2s;
+  animation-iteration-count: infinite;
+}
+
+#arrow-fixed-bottom:hover {
+  cursor: pointer;
+}
+
+#circleDown {
+  position: fixed;
+  bottom: 62;
+  right: 44;
+  z-index: 100;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  border: solid 2px red;
+  z-index: 50;
+  animation : animaDown 1.2s;
+  animation-iteration-count: infinite;
+}
+
+#arrow-fixed-top:hover {
+  cursor: pointer;
+}
+
+#phone:hover {
+  animation : animaPhone 0.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animaPhone {
+  0% {
+    transform: rotate(10deg)  }
+  50% {
+    transform: rotate(-10deg)  }
+}
+
+#mail:hover {
+  animation : animaMail 1.2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animaMail {
+  50% {
+    transform: scale(1.2)  }
+}
+
+
+.phone {
+  /*border: solid 1px black;*/
+  width: 180px;
+  margin: auto;
+  border-radius: 5px;
+  background: linear-gradient(230deg, #EBEBEB, #F4F4F4);
+  box-shadow: 0px 1px 0px #CBCBCB
+}
+
+.mail {
+  /*vertical-align: center*/
+  padding-top: 10px;
+  height: 50px;
+  /*border: solid 1px black;*/
+  width: 350px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  background: linear-gradient(230deg, #DF2C40, white);
+  opacity: 0.8;
+  box-shadow: 0px 1px 0px #CBCBCB
+}
+
+.mail>span>img {
+  height: 30px
+}
+
+.hr-contacts {
+  width: 10%;
+}
+
+.skills-interests>img {
+  margin-left: 20px;
+}
+
+.skills-hobbies>img {
+  margin-left: 20px;
+}
+
+
+
+/*.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}*/
