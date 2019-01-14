@@ -8,7 +8,7 @@ var myRadarChart = new Chart(ctx, {
     datasets: [{
       data: [5, 4, 3, 5, 3],
       borderWidth: 1,
-      borderColor: 'black',
+      borderColor: 'white',
       backgroundColor: 'rgba(0,255,0,0.5)'
       }]
     },
@@ -18,7 +18,19 @@ var myRadarChart = new Chart(ctx, {
         display: false
       },
     scale: {
-        // Hides the scale
+      display: true,
+      xAxes: [{
+          display: true,
+          color: "#FFFFFF",
+          gridLines: {
+            display: true,
+            color: 'red'
+          }
+      }],
+        gridLines: {
+          display: true ,
+          color: "#FFFFFF"
+            },
         display: true,
         ticks: {
           beginAtZero: true,
@@ -26,7 +38,7 @@ var myRadarChart = new Chart(ctx, {
         },
         pointLabels: {
           fontSize: 20,
-          fontColor: 'rgba(0,0,0,0.3)'
+          fontColor: 'white'
         }
     }},
   });
