@@ -293,9 +293,9 @@ header, img {
   margin-bottom: 24px;
   /*background-color: rgba(160,160,160,0.8);*/
   /*border: solid 2px white;*/
-/*  background-image: url(assets/earth.png);
-  background-size: cover;
-  background-repeat: no-repeat;*/
+  background-image: url(assets/earth.png);
+  /*background-size: cover;*/
+  background-repeat: no-repeat;
 
 }
 
@@ -361,7 +361,8 @@ header, img {
   border-radius: 5px;
   padding-left: 16px;
   margin: 20px 60px 60px 60px;
-  background-color: rgba(255,255,255,0.98);
+  background-color: transparent;
+  /*background-color: rgba(255,255,255,0.98);*/
   padding-bottom: 10px;
   text-align: center;
 
@@ -734,7 +735,8 @@ button.btn.btn-info {
   margin: auto;
   margin-top: 10px;
   border-radius: 10px;
-  background: linear-gradient(230deg, #DF2C40, white);
+  background: linear-gradient(230deg, #EBEBEB, #F4F4F4);
+  /*background: linear-gradient(230deg, #DF2C40, white);*/
   opacity: 0.8;
   box-shadow: 0px 1px 0px #CBCBCB
 }
