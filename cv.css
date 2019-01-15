@@ -639,9 +639,10 @@ button.btn.btn-info {
 
 @keyframes animaTop {
   0% {
-    transform: scale(1);  }
+    transform: scale(1);}
   50% {
-    transform: scale(1.05)  }
+    transform: scale(1.05);
+      }
 }
 
 
@@ -702,9 +703,11 @@ button.btn.btn-info {
 
 @keyframes animaPhone {
   0% {
-    transform: rotate(10deg)  }
+    /*transform: rotate(10deg);*/
+    transform: rotateZ(0deg);  }
   50% {
-    transform: rotate(-10deg)  }
+    /*transform: rotate(-10deg);*/
+    transform: rotateZ(360deg);  }
 }
 
 #mail:hover {
@@ -760,6 +763,71 @@ button.btn.btn-info {
 }
 
 
+/*animation -------------------------*/
+
+
+.animation-container {
+  /*height: 400px;*/
+  transform: rotateX(65.5deg);
+  /*transform-style: preserve-3d;*/
+width: 155px;
+ height: 155px;
+ border-radius: 50%;
+ position: relative;
+ border: 1px solid black;
+}
+
+.planet-container {
+/*  width: 200px;
+  height: 50px;
+  background-color: transparent;
+  animation : animaPlanet 5s linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;*/
+  width: 200px;
+ height: 50px;
+ position: absolute;
+ top: 52.5px;
+ right: -25px;
+ background-color: transparent;
+ animation : animaPlanet 15s linear;
+ animation-iteration-count: infinite;
+ transform-style: preserve-3d;
+}
+
+
+
+
+@keyframes animaPlanet {
+  0% {
+    /*transform: rotate(10deg);*/
+    transform: rotateZ(0deg);  }
+  100% {
+    /*transform: rotate(-10deg);*/
+    transform: rotateZ(-360deg);  }
+}
+
+
+.planet {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  /*animation : animaPlanetY 5s linear;*/
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+  transform: rotateX(-65.5deg);
+}
+
+
+@keyframes animaPlanetY {
+ 0% {
+   transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+    }
+ 100% {
+   transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+   }
+ }
 
 /*.tooltip {
   position: relative;

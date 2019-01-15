@@ -1,4 +1,3 @@
-
 var height = window.top.innerHeight;
 
 function scrollUp() {
@@ -17,6 +16,36 @@ function scrollDown() {
 });
 }
 
+var derniere_position_de_scroll_connue = 0;
+var ticking = false;
+
+function faitQuelquechose(position_scroll) {
+  // faites quelque chose avec la position du scroll
+}
+
+window.addEventListener('wheel', function(e) {
+  derniere_position_de_scroll_connue = window.scrollY;
+  var height = window.top.innerHeight
+  if (e.deltaY < 0) {
+    height = -height;
+  }
+  console.log(e)
+
+  if (!ticking) {
+    window.requestAnimationFrame(function() {
+    window.scrollBy({
+    top: height,
+    left: 0,
+    behavior: 'smooth'
+    });
+      faitQuelquechose(derniere_position_de_scroll_connue);
+      ticking = false;
+    });
+  }
+  ticking = true;
+});
+
+faitQuelquechose()
 // const clickable = document.querySelector("#clickable");
 // clickable.addEventListener("click", (event) => {
 //   console.log("hello")
