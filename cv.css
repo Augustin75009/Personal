@@ -363,6 +363,7 @@ body {
 
 .experiences {
   /*flex: 3;*/
+  /*height: 90vh;*/
   display: flex;
   flex-direction: row;
   /*border: solid 0.5px;*/
@@ -370,19 +371,40 @@ body {
   /*padding-left: 48px;*/
   /*padding-right: 48px;*/
   /*margin: 20px 132px 132px 60px;*/
-  /*background-color: rgba(255,255,255,0.95);*/
   background: transparent;
-  z-index: 300;
+  z-index: 301;
   position: fixed;
-  top: 80;
-  left: -580px;
+  top: 60;
+  left: -612px;
+  /*overflow: auto;*/
+}
+
+.experiences-list {
+  padding-left: 10px;
+  overflow: auto;
+  height: 90vh;
+}
+
+.cv {
+  height: 90vh;
+  width: 612px;*/
+  overflow: auto;
+  background-color: rgba(255,255,255,0.95);
 }
 .experiences.open-cv{
   left: 0px;
 }
 
+.tongue {
+  padding-left: 10px;
+}
+
 .tongue-cv {
   color: white;
+  height: 60px;
+  width: 60px;
+  padding-left:10px;
+  /*border: solid 2px red;*/
 }
 
 .infos {
@@ -400,6 +422,7 @@ body {
   position: fixed;
   top: 10;
   left: -500px;
+  z-index: 300;
   /*margin: 0 auto;*/
 }
 
