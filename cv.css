@@ -760,6 +760,7 @@ button.btn.btn-info {
   background-color: black;
   margin: auto;
   padding-top: 100px;
+  justify-content: center;
 }
 /*animation -------------------------*/
 
@@ -840,41 +841,223 @@ button.btn.btn-info {
    }
  }
 
-/*.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
+/*-------------------*/
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-}
-
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+/*.head {
+  background-image: url("images/vecteur-onde.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
 }*/
+
+.solar-system {
+  position: relative;
+  right: -474px;
+  top: 100px;
+  height: 400px;
+  transform: rotateX(65.5deg);
+  transform-style: preserve-3d;
+}
+
+.ellipse {
+  border-radius: 50%;
+  position: relative;
+  border: 1px solid white;
+}
+
+.planet {
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+
+}
+
+.planet:hover {
+  animation-play-state: paused, paused;
+  cursor: pointer;
+}
+
+.ellipse-centered1 {
+  position: absolute;
+  left: 52.5px;
+  top: 52.5px;
+
+}
+
+#ellipse1 {
+  width: 155px;
+  height: 155px;
+}
+
+#orbit1 {
+  width: 200px;
+  position: absolute;
+  top: 52.5px;
+  right: -25px;
+  animation : animaPlanet 5s linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+
+}
+
+#planet1 {
+  animation : animaPlanetY 5s linear;
+  animation-iteration-count: infinite;
+
+}
+
+.ellipse-centered2 {
+  position: absolute;
+  left: -47.5px;
+  top: -47.5px;
+
+}
+#ellipse2 {
+  width: 355px;
+  height: 355px;
+}
+
+#orbit2 {
+  width: 400px;
+  position: absolute;
+  top: 152.5px;
+  right: -25px;
+  animation : animaPlanet 10s linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+
+}
+
+#planet2 {
+  animation : animaPlanetY 10s linear;
+  animation-iteration-count: infinite;
+}
+
+.ellipse-centered3 {
+  position: absolute;
+  left: -147.5px;
+  top: -147.5px;
+
+}
+#ellipse3 {
+  width: 555px;
+  height: 555px;
+}
+
+#orbit3 {
+  width: 600px;
+  position: absolute;
+  top: 252.5px;
+  right: -25px;
+  animation : animaPlanet 16s linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+
+}
+
+#planet3 {
+  animation : animaPlanetY 16s linear;
+  animation-iteration-count: infinite;
+}
+
+.ellipse-centered4 {
+  position: absolute;
+  left: -247.5px;
+  top: -247.5px;
+
+}
+#ellipse4 {
+  width: 755px;
+  height: 755px;
+}
+
+#orbit4 {
+  width: 800px;
+  position: absolute;
+  top: 352.5px;
+  right: -25px;
+  animation : animaPlanet 27s linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+
+}
+
+#planet4 {
+  animation : animaPlanetY 27s linear;
+  animation-iteration-count: infinite;
+}
+
+.ellipse-centered5 {
+  position: absolute;
+  left: -347.5px;
+  top: -347.5px;
+
+}
+#ellipse5 {
+  width: 955px;
+  height: 955px;
+}
+
+#orbit5 {
+  width: 1000px;
+  position: absolute;
+  top: 452.5px;
+  right: -25px;
+  animation : animaPlanet 40s linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+}
+
+#planet5 {
+  animation : animaPlanetY 40s linear;
+  animation-iteration-count: infinite;
+}
+
+.ellipse-centered6 {
+  position: absolute;
+  left: -447.5px;
+  top: -447.5px;
+
+}
+#ellipse6 {
+  width: 1155px;
+  height: 1155px;
+}
+
+#orbit6 {
+  width: 1200px;
+  position: absolute;
+  top: 552.5px;
+  right: -25px;
+  animation : animaPlanet 65s linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+
+}
+
+#planet6 {
+  animation : animaPlanetY 65s linear;
+  animation-iteration-count: infinite;
+}
+
+
+
+@keyframes animaPlanet {
+  0% {
+    /*transform: rotate(10deg);*/
+    transform: rotateZ(0deg);  }
+  100% {
+    /*transform: rotate(-10deg);*/
+    transform: rotateZ(-360deg);  }
+}
+
+@keyframes animaPlanetY {
+  0% {
+    transform: rotateX(-90deg) rotateY(360deg) rotateZ(0deg);
+     }
+  100% {
+    transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
+    }
+  }
