@@ -21,19 +21,19 @@
       <!-- <div class="glitch"></div> -->
       <div class="banner">
           <ul id="scene"  class="scene">
-            <li class="layer1" data-depth="0.15"><div class="layer"></div></li>
-            <li class="layer2" data-depth="0.2"><div class="layer"></div></li>
-            <li class="layer3" data-depth="0.1"><div class="layer"></div></li>
-            <li class="name" data-depth="0.4"><div class="name" id="name"></div></li>
+            <li class="layer2" data-depth="0.15"><div class="layer"></div></li>
+            <li class="layer3" data-depth="0.2"><div class="layer"></div></li>
+            <li class="layer4" data-depth="0.1"><div class="layer"></div></li>
+            <li class="name" data-depth="0.3"><div class="name" id="name"></div></li>
             <!-- <li class="galaxy" data-depth="0.4"></li> -->
           </ul>
       </div>
       <div class="first-card">
         <ul id="scene-skills"  class="scene">
-            <li class="layer1" data-depth="0.15"><div class="layer"></div></li>
-            <li class="layer2" data-depth="0.2"><div class="layer"></div></li>
-            <li class="layer3" data-depth="0.1"><div class="layer"></div></li>
-            <li class="layer" data-depth="0" style="width: 98%">
+            <li class="layer2" data-depth="0.15"><div class="layer"></div></li>
+            <li class="layer3" data-depth="0.2"><div class="layer"></div></li>
+            <li class="layer4" data-depth="0.1"><div class="layer"></div></li>
+            <li class="layer" data-depth="0.3" style="width: 98%">
               <div class="skills-description">
                 <div class="about">
                   <div class="avatar-icon">
@@ -63,10 +63,10 @@
       </div>
       <div class="second-card">
         <ul id="scene-description"  class="scene">
-            <li class="layer1" data-depth="0.15"><div class="layer"></div></li>
-            <li class="layer2" data-depth="0.2"><div class="layer"></div></li>
-            <li class="layer3" data-depth="0.1"><div class="layer"></div></li>
-            <li class="layer" data-depth="0" style="width: 98%">
+            <li class="layer2" data-depth="0.15"><div class="layer"></div></li>
+            <li class="layer3" data-depth="0.2"><div class="layer"></div></li>
+            <li class="layer4" data-depth="0.1"><div class="layer"></div></li>
+            <li class="layer" data-depth="0.3" style="width: 98%">
               <div class="skills-description">
                 <div class="my-skills">
                   <div class="skills-card"><img src="assets/Ruby.png" alt=""></div>
@@ -84,9 +84,23 @@
           </ul>
       </div>
 
-    <!-- <div class="cv-container"> -->
-      <!-- <div class="bottom-infos"> -->
-        <!-- <h1 style="color: red">Curriculum Vitae</h1> -->
+      <div class="third-card">
+      <div class="animation-container">
+        <div class="planet-container">
+          <div class="planet">
+
+          </div>
+        </div>
+      </div>
+        <div class="planet-controller">
+        <i class="fa fa-arrow-left" aria-hidden="true" onClick="rotateLeft()"></i>
+        <i class="fa fa-arrow-right" aria-hidden="true" onClick="rotateRight()"></i>
+        </div>
+      </div>
+
+
+
+
         <div id="cv-toggle" class="experiences">
           <div class="cv">
           <div class="experiences-list">
@@ -218,13 +232,7 @@
         <div id="circleDown"></div>
         <i onClick="scrollDown()" id="arrow-fixed-bottom" class="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
       </div>
-      <!-- <div class="animation-container">
-        <div class="planet-container">
-          <div class="planet">
 
-          </div>
-        </div>
-      </div> -->
     <!-- </div> -->
     <!-- Script tags -->
     <script src="cv.js"></script>
@@ -235,6 +243,7 @@
     <script src="chart.js"></script>
     <script src="copy.js"></script>
     <script src="open.js"></script>
+    <script src="rotate.js"></script>
   </body>
 </html>
 
