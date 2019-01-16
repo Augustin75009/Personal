@@ -34,10 +34,30 @@ body {
   z-index: 200;
 }
 
-#name:hover {
-  cursor: pointer;
-}
 
+/*.name:before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 90%;
+  height: 600px;
+  opacity: 1;
+  background: url(assets/name.png);
+  background-position: 0 0;
+  animation : animate .4s 0.5s;
+  animation-iteration-count: 0;
+  opacity: 0.5;
+}
+*/
+/*.galaxy {
+  width: 90%;
+  height: 600px;
+  background : url(assets/gal.png);
+  position: relative;
+  background-size: fill;
+  z-index: 200;
+}*/
 
 .name:before {
   content:'';
@@ -125,6 +145,7 @@ body {
   opacity: 1;
   background: url(assets/layer3.png);
   background-position: -10 -10;
+  transform: translate(0px 150px);
   animation : animated 100s;
   animation-iteration-count: infinite;
   opacity: 0.5;
@@ -172,7 +193,7 @@ body {
 @keyframes animated {
 
   50% {
-   transform: translate(-100px,-100px);
+   transform: translate(0px,-100px);
   }
 
 }
@@ -180,7 +201,7 @@ body {
 @keyframes animatedd {
 
   50% {
-   transform: translate(100px,100px);
+   transform: translate(0px,100px);
   }
 
 }
@@ -191,9 +212,15 @@ body {
   height: 100vh;
   width: 100% !important;
   position: relative;
-  z-index: 20;
+  z-index: 200;
   margin: auto;
   vertical-align: bottom;
+  overflow: hidden;
+}
+
+.planet {
+  background-image: url(assests/galaxy.png)
+  z-index: 300;
 }
 
 .banner img {
@@ -222,18 +249,6 @@ body {
   margin: auto;
   vertical-align: bottom;
   border: solid 2px black;
-}
-
-.cv-container {
-  /*position: absolute;*/
-  background-color: black;
-  top: 100vh;
-  display: flex;
-  flex-direction: column;
-  /*border: solid 0.5px;*/
-  /*border-radius: 5px;*/
-  padding: 20px 0px 20px 0px;
-  width: 100%;
 }
 
 .top-info {
@@ -306,11 +321,11 @@ body {
 
 .contact {
   text-align: center;
-  margin: 10px;
+  /*margin: 10px;*/
   /*background-color: white;*/
   font-size: 20px;
   /*border: solid 1px black;*/
-  padding: 10px;
+  /*padding: 10px;*/
   width: 500px;
   display: inline-block;
   border-radius: 10px;
@@ -347,30 +362,50 @@ body {
 }
 
 .experiences {
-  flex: 3;
+  /*flex: 3;*/
+  display: flex;
+  flex-direction: row;
   /*border: solid 0.5px;*/
   border-radius: 5px;
-  padding-left: 48px;
-  padding-right: 48px;
-  margin: 20px 132px 132px 60px;
-  background-color: rgba(255,255,255,0.95);
+  /*padding-left: 48px;*/
+  /*padding-right: 48px;*/
+  /*margin: 20px 132px 132px 60px;*/
+  /*background-color: rgba(255,255,255,0.95);*/
+  background: transparent;
   z-index: 300;
+  position: fixed;
+  top: 80;
+  left: -580px;
+}
+.experiences.open-cv{
+  left: 0px;
+}
+
+.tongue-cv {
+  color: white;
 }
 
 .infos {
-  flex: 1;
+  display: flex;
+  flex-direction: row;
+  /*width: 500px;*/
   /*border: solid 0.5px;*/
   border-radius: 5px;
-  padding-left: 16px;
-  margin: 20px 60px 60px 60px;
+  /*padding-left: 16px;*/
+  /*margin: 20px 60px 60px 60px;*/
   background-color: transparent;
   /*background-color: rgba(255,255,255,0.98);*/
-  padding-bottom: 10px;
+  /*padding-bottom: 10px;*/
   text-align: center;
-
+  position: fixed;
+  top: 10;
+  left: -500px;
   /*margin: 0 auto;*/
 }
 
+.infos.open{
+  left: 0px;
+}
 .experiences>h3 {
 }
 
@@ -678,6 +713,10 @@ button.btn.btn-info {
   color: white;
 }
 
+#arrow-fixed-bottom {
+  z-index: 500;
+}
+
 #circleDown {
   position: fixed;
   bottom: 62;
@@ -687,7 +726,7 @@ button.btn.btn-info {
   width: 54px;
   border-radius: 50%;
   border: solid 2px red;
-  z-index: 50;
+  z-index: 500;
   animation : animaDown 1.2s;
   animation-iteration-count: infinite;
 }
