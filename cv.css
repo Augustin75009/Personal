@@ -169,6 +169,7 @@ body {
   margin: auto;
   vertical-align: bottom;
   /*border: solid 2px white;*/
+  overflow: hidden;
 }
 
 .second-card {
@@ -181,7 +182,7 @@ body {
   margin: auto;
   vertical-align: bottom;
   border: solid 2px black;
-  overflow: hide;
+  overflow: hidden;
 }
 
 .top-info {
@@ -463,27 +464,31 @@ button.btn.btn-info {
   /*flex-wrap: wrap;*/
   flex-direction: row;
   /*border: solid 1px white;*/
-  margin: 10px;
-  padding-left: 20px;
-  justify-content: space-between;
+  /*margin: 10px;*/
+  /*padding-left: 88px;*/
+  /*padding-left: 20px;*/
+  /*justify-content: space-between;*/
 }
 
 .skills-card {
   height: 50px;
   width: 50%;
-  padding: 10px;
+  /*padding: 10px;*/
+  transform: scale(0.8);
 }
 
 .skills-card>img {
   height: 100px;
   width: 200px;
   margin: auto;
+  transform: scale(0.8);
 }
 
 .skills-card.python>img {
   height: 70px;
   width: 200px;
   margin: auto;
+  transform: scale(0.8);
 }
 
 /*.skills-card.parallax>img {
@@ -492,42 +497,46 @@ button.btn.btn-info {
   /*padding-bottom: 40px;*/
 
 .my-skills {
-  flex: 1;
+  height: 40vh;
   display: flex;
+  width: 50%;
   flex-wrap: wrap;
   /*height: 60vh;*/
-  height: 500px;
-  border: solid 2px white;
-  border: none;
+  /*height: 500px;*/
+  /*border: solid 2px white;*/
+  /*border: none;*/
   margin: auto;
   border-radius: 5px;
-  padding-left: 50px;
-  padding-top: 30px;
+  /*padding-left: 50px;*/
+  /*padding-top: 30px;*/
   background-color: transparent;
   justify-content: space-around;
 }
 
 .chart {
-  flex: 1;
+  height: 50vh;
+  width: 50%;
   /*height: 60vh;*/
-  height: 500px;
-  border: solid 2px white;
+  /*height: 500px;*/
+  /*border: solid 2px white;*/
   margin: auto;
   border-radius: 5px;
   background-color: transparent;
-  border: none;
-  padding-top: 30px;
+  /*border: none;*/
+  /*padding-top: 30px;*/
 }
 
 #myChart.chartjs-render-monitor {
-    margin-top: 0px;
-    /*height: 800px;*/
+    margin-top: 35px;
+    /*margin: auto;*/
+    height: 50vh;
+    /*transform: scale(0.5);*/
   }
 
 
 @media (max-width: 1300px) {
   #myChart.chartjs-render-monitor {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
   }
 }
 
@@ -536,10 +545,10 @@ button.btn.btn-info {
     vertical-align: center
   }
   #myChart {
-    transform: scale(0.9);
+    transform: scale(0.5);
   }
   #myChart.chartjs-render-monitor {
-    margin-top: 80px;
+    /*margin-top: 80px;*/
   }
   .my-skills {
     padding-left: 0px;
@@ -709,8 +718,8 @@ button.btn.btn-info {
 }
 
 #mail:hover {
-  animation : animaMail 1.2s;
-  animation-iteration-count: infinite;
+  /*animation : animaMail 1.2s;
+  animation-iteration-count: infinite;*/
   cursor: pointer;
 }
 
@@ -1070,7 +1079,7 @@ button.btn.btn-info {
 /* ---------------widget-----------------*/
 
 .widget {
-  z-index: 201;
+  z-index: 240;
 }
 
 #widget-container {
@@ -1078,8 +1087,8 @@ button.btn.btn-info {
   bottom: 62;
   left: 44;
   z-index: 100;
-  height: 80px;
-  width: 80px;
+  height: 54px;
+  width: 54px;
   border-radius: 50%;
   /*border: solid 2px blue;*/
   background-image: url(assets/info.svg);
@@ -1099,11 +1108,11 @@ button.btn.btn-info {
 
 #widget-mail {
   position: fixed;
-  bottom: 100;
-  left: 71.5;
+  bottom: 76;
+  left: 50.5;
   z-index: 1;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   /*border: solid 2px red;*/
   visibility: hidden;
@@ -1111,11 +1120,11 @@ button.btn.btn-info {
 
 #widget-phone {
   position: fixed;
-  bottom: 100;
-  left: 71.5;
+  bottom: 76;
+  left: 50.5;
   z-index: 1;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   /*border: solid 2px red;*/
   visibility: hidden;
@@ -1123,15 +1132,29 @@ button.btn.btn-info {
 
 #widget-cv {
   position: fixed;
-  bottom: 100;
-  left: 71.5;
+  bottom: 76;
+  left: 50.5;
   z-index: 1;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   /*border: solid 2px red;*/
   visibility: hidden;
 }
+
+#widget-close {
+  position: fixed;
+  bottom: 76;
+  left: 50.5;
+  z-index: 1;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  cursor: pointer;
+  /*border: solid 2px red;*/
+  visibility: hidden;
+}
+
 
 
 @keyframes shoWidget {
@@ -1158,8 +1181,8 @@ button.btn.btn-info {
   }
 
   100% {
-    bottom: 162;
-    left: 71.5;
+    bottom: 132;
+    left: 50.5;
     visibility: visible;
     background-image: url(assets/gmail.svg);
     background-size: cover;
@@ -1181,8 +1204,8 @@ button.btn.btn-info {
   }
 
   100% {
-    bottom: 202;
-    left: 71.5;
+    bottom: 182;
+    left: 50.5;
     visibility: visible;
     background-image: url(assets/phone-circle.svg);
     background-size: cover;
@@ -1204,18 +1227,41 @@ button.btn.btn-info {
   }
 
   100% {
-    bottom: 242;
-    left: 71.5;
+    bottom: 232;
+    left: 50.5;
     visibility: visible;
     background-image: url(assets/document.svg);
     background-size: cover;
     }
   }
 
+.widget-close.show-widget {
+  animation : shoWidgetClose 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shoWidgetClose {
+  70% {
+    visibility: visible;
+    background-image: url(assets/error.svg);
+    background-size: cover;
+  }
+
+  100% {
+    bottom: 284;
+    /*transform: scale(0.8);*/
+    left: 46.5;
+    visibility: visible;
+    background-image: url(assets/error.svg);
+    background-size: cover;
+    }
+  }
+
 
 .content-mail {
-  margin-left: 40px;
-  margin-top: 3px;
+  margin-left: 48px;
+  margin-top: 10px;
   visibility: hidden;
 }
 
@@ -1226,8 +1272,8 @@ button.btn.btn-info {
 }
 
 .content-phone {
-  margin-left: 40px;
-  margin-top: 3px;
+  margin-left: 48px;
+  margin-top: 10px;
   visibility: hidden;
 }
 
@@ -1238,8 +1284,8 @@ button.btn.btn-info {
 }
 
 .content-cv {
-  margin-left: 40px;
-  margin-top: 3px;
+  margin-left: 48px;
+  margin-top: 10px;
   visibility: hidden;
 }
 
@@ -1263,6 +1309,9 @@ button.btn.btn-info {
     100% {
     visibility: visible;
     opacity: 1;
+    width: 100px;
+    color: white;
+    /*background-color: white;*/
     z-index: 1000
     }
   }

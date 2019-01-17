@@ -1,5 +1,5 @@
 
-const copyMailId = document.querySelectorAll('.mail');
+const copyMailId = document.querySelectorAll('#mail');
 
 copyMailId.forEach(copyText => {
     copyText.addEventListener('click', () => {
