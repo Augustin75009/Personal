@@ -280,12 +280,10 @@
               15 rue Notre Dame de Lorette <br>
               Paris, IDF France<br><br>
             <div class="phone">
-              <span><i class="fa fa-mobile" aria-hidden="true" id="phone"></i> 06.68.28.98.06</span>
+
             </div>
             <div class="mail">
-              <span>
-                <img src="assets/gmail.png"> <span id="mail" onclick="myFunction()">augustincousin.pro@gmail.com</span>
-              </span>
+
             </div>
           </div>
           <div class="tongue" onClick="openFunction()" style="font-size: 40px; color: white">
@@ -300,9 +298,9 @@
       </div>
        <div class="widget">
         <div id="widget-container">
-          <div class="widget-mail"></div>
-          <div class="widget-phone"></div>
-          <div class="widget-cv"></div>
+          <div id="widget-mail" class="widget-mail"><div class="content-mail"><span id="mail" onclick="myFunction()">augustincousin.pro@gmail.com</span></div></div>
+          <div id="widget-phone" class="widget-phone"><div class="content-phone"><span>06.68.28.98.06</span></div></div>
+          <div id="widget-cv" class="widget-cv"><div class="content-cv"> <span style="width: 100px !important">Afficher</span></div></div>
         </div>
       </div>
 
@@ -318,6 +316,7 @@
     <script src="open.js"></script>
     <script src="rotate.js"></script>
     <script src="parallaxScroll.js"></script>
+    <script src="shoWidget.js"></script>
 
 
 
