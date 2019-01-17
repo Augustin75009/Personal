@@ -337,6 +337,9 @@ body {
   height: 60px;
   width: 60px;
   padding-left:10px;
+  background-image: url(assets/file.png);
+  size: 40px;
+  background-size: cover;
   /*border: solid 2px red;*/
 }
 
@@ -1063,3 +1066,18 @@ button.btn.btn-info {
     transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg);
     }
   }
+
+/* ---------------widget-----------------*/
+
+#widget-container {
+  position: fixed;
+  bottom: 62;
+  left: 44;
+  z-index: 100;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: solid 2px red;
+  animation : animaTop 1.2s;
+  animation-iteration-count: infinite;
+}
