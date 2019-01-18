@@ -85,9 +85,11 @@ body {
 .cockpit {
   width: 100% !important;
   height: 100vh;
-  background : url(assets/cockpit2.png);
+  background : url(assets/cockpit.png);
   background-size: cover;
   position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
   /*animation : animated 200s;
   animation-iteration-count: infinite;
   opacity: 0.8;*/
