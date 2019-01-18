@@ -82,6 +82,32 @@ body {
   opacity: 0.8;
 }
 
+.cockpit {
+  width: 100% !important;
+  height: 100vh;
+  background : url(assets/cockpit2.png);
+  background-size: cover;
+  position: relative;
+  /*animation : animated 200s;
+  animation-iteration-count: infinite;
+  opacity: 0.8;*/
+}
+
+.astro {
+  width: 100% !important;
+  height: 100vh;
+  background : url(assets/astro.png);
+  background-size: 40%;
+  position: relative;
+  background-position: 2% 25%;
+  /*background-size: cover;*/
+  background-repeat: no-repeat;
+  /*animation : animated 200s;
+  animation-iteration-count: infinite;
+  opacity: 0.8;*/
+}
+
+
 
 @keyframes animate {
   0% {
@@ -566,8 +592,8 @@ button.btn.btn-info {
 }
 
 .about {
-  /*height: 60vh;*/
-  height: 500px;
+  height: 100vh;
+  /*height: 500px;*/
   width: 98%;
   /*border-top: solid 2px white;
   border-left: solid 2px white;*/
@@ -575,23 +601,31 @@ button.btn.btn-info {
   border-radius: 5px;
   background-color: transparent;
   color: white;
-  padding-top: 10px;
+  padding-top: 20%;
+  /*font-weight: 200;*/
+  /*text-align: center;*/
+}
+
+.my-description>h3 {
+  font-size: 32px;
   text-align: center;
-
 }
 
-.my-description {
-/*  margin-top: 10px;
-  padding: 10px;*/
+.wagon-batch {
+  text-align: center;
 }
 
-.text-animated {
+.avatar-icon {
+  text-align: center;
+}
+
+/*.text-animated {
   animation-duration: 3s;
   animation-name: slidein;
   animation-iteration-count: 0;
-}
+}*/
 
-@keyframes slidein {
+/*@keyframes slidein {
   from {
     margin-left: 100%;
     width: 300%;
@@ -601,10 +635,11 @@ button.btn.btn-info {
     margin-left: 0%;
     width: 100%;
   }
-}
+}*/
 
 .hr {
   width: 10%;
+  border-top: 2px solid #eee;
 }
 
 .net-logo>img {
