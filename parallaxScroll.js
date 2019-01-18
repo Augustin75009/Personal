@@ -3,6 +3,7 @@ const parallaxScroll = document.querySelector(".name")
 
 window.addEventListener("scroll", function() {
   let offset = window.pageYOffset;
+  console.log(offset)
   console.log(offset);
   parallaxScroll.style.backgroundPositionY = offset * 0.8 + "px";
   parallaxScroll.style.opacity = 1 - (offset / 400);
