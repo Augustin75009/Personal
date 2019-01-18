@@ -4,9 +4,9 @@ var myRadarChart = new Chart(ctx, {
   type: 'radar',
   data: {
     labels:
-      ['Ruby', 'JavaScript', 'Front-end', 'Back-end', 'Design'],
+      ['Ruby', 'JavaScript', 'Front-end', 'Python', 'Back-end', 'Design'],
     datasets: [{
-      data: [5, 4, 3, 5, 3],
+      data: [4, 4, 3, 1, 4, 3],
       borderWidth: 1,
       borderColor: 'white',
       backgroundColor: 'rgba(0,255,0,0.5)'
@@ -29,16 +29,17 @@ var myRadarChart = new Chart(ctx, {
       }],
         gridLines: {
           display: true ,
-          color: "#FFFFFF"
+          color: "grey"
             },
         display: true,
         ticks: {
           beginAtZero: true,
+          max: 5,
           display: false
         },
         pointLabels: {
-          fontSize: 20,
-          fontColor: 'white'
+          fontSize: 15,
+          fontColor: 'grey'
         }
     }},
   });
