@@ -65,7 +65,7 @@ body {
 .layer4 {
   width: 100%;
   height: 100vh;
-  background : url(assets/layer2.png);
+  background : url(assets/layer3.png);
   position: relative;
   animation : animatedd 200s;
   animation-iteration-count: infinite;
@@ -75,7 +75,7 @@ body {
 .layer3 {
   width: 100% !important;
   height: 100vh;
-  background : url(assets/layer3.png);
+  background : url(assets/layer2.png);
   position: relative;
   animation : animated 200s;
   animation-iteration-count: infinite;
