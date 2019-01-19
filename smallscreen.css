@@ -1,0 +1,11 @@
+  .avatar-icon>img {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: solid 3px white;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif !important;
+  color: red !important;
+}

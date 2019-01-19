@@ -8,6 +8,7 @@
     <title>Augustin Cousin</title>
 
     <link rel="stylesheet" href="cv.css">
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="smallscreen.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
     <link rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -61,18 +62,20 @@
           </ul>
       </div>
       <div class="second-card">
-        <ul id="scene-description"  class="scene">
-            <li class="layer2" data-depth="0.15"><div class="layer"></div></li>
-            <li class="layer3" data-depth="0.2"><div class="layer"></div></li>
-            <li class="layer4" data-depth="0.1"><div class="layer"></div></li>
-            <li class="layer" data-depth="0" style="width: 100%; margin: auto; right: 0%">
-              <div class="skills-description">
-                <div class="my-skills">
+        <div class="skills-description">
+          <div class="my-skills">
+            <ul>
+              <li>
+                <div class="skills-packages-1">
                   <div class="skills-card"><i class="devicon-ruby-plain-wordmark colored"></i></div>
                   <div class="skills-card"><i class="devicon-css3-plain-wordmark colored"></i></div>
                   <div class="skills-card"><i class="devicon-html5-plain-wordmark colored"></i></div>
                   <div class="skills-card"><i class="devicon-javascript-plain-wordmark colored"></i></div>
                   <div class="skills-card"><i class="devicon-bootstrap-plain-wordmark colored"></i></div>
+                </div>
+              </li>
+              <li>
+                <div class="skills-packages-2">
                   <div class="skills-card"><i class="devicon-python-plain-wordmark colored"></i></div>
                   <div class="skills-card"><i class="devicon-github-plain-wordmark"></i></div>
                   <div class="skills-card"><i class="devicon-jquery-plain-wordmark colored"></i></div>
@@ -80,14 +83,22 @@
                   <div class="skills-card"><i class="devicon-rails-plain-wordmark colored"></i></div>
                   <div class="skills-card"><i class="devicon-trello-plain colored"></i></div>
                 </div>
-                <div class="chart">
-                 <canvas id="myChart"></canvas>
-                </div>
-              </div>
-          </li>
-            <li class="cockpit" data-depth="0.05"><div class="layer"></div></li>
-          </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+          <div class="chart">
+           <canvas id="myChart"></canvas>
+          </div>
       </div>
+<!--         <ul id="scene-description"  class="scene">
+            <li class="layer2bis" data-depth="0.15"><div class="layer"></div></li>
+            <li class="layer3bis" data-depth="0.2"><div class="layer"></div></li>
+            <li class="layer4bis" data-depth="0.1"><div class="layer"></div></li>
+            <li class="cockpit" data-depth="0.05"><div class="layer"></div></li>
+            <li class="layer" data-depth="0.05" style="width: 100%; margin: auto; right: 0%">
+          </li>
+        </ul> -->
       <div class="top">
         <div id="circleTop"></div>
         <i onClick="scrollUp()" id="arrow-fixed-top" class="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
