@@ -337,6 +337,14 @@ body {
   padding-top: 8px;
 }
 
+#circleLeft.selector-choice {
+  opacity: 0.5
+}
+
+#circleRight.selector-choice {
+  opacity: 0.5
+}
+
 
 #circleRight:hover {
   cursor: pointer;

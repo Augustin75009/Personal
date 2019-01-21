@@ -14,25 +14,27 @@ window.addEventListener("wheel", function(event) {
   })
 
 
-function scrollUp() {
-  window.scrollBy({
-  top: -height,
-  left: 0,
-  behavior: 'smooth'
-});
-  // console.log("position=" + document.getElementById("second-card").scrollHeight);
-}
+// function scrollUp() {
+//   window.scrollBy({
+//   top: -height,
+//   left: 0,
+//   behavior: 'smooth'
+// });
+//   // console.log("position=" + document.getElementById("second-card").scrollHeight);
+// }
 
-function scrollDown() {
-  window.scrollBy({
-  top: window.innerHeight,
-  left: 0,
-  behavior: 'smooth'
-});
-  // console.log("position=" + document.getElementById("second-card").offsetTop);
-}
+// function scrollDown() {
+//   window.scrollBy({
+//   top: window.innerHeight,
+//   left: 0,
+//   behavior: 'smooth'
+// });
+//   // console.log("position=" + document.getElementById("second-card").offsetTop);
+// }
 
 function scrolledLeft(chart) {
+  document.getElementById('circleRight').classList.remove('selector-choice')
+  document.getElementById('circleLeft').classList.add('selector-choice')
   document.getElementById("my-skills").scrollTo({
   top: 0,
   left: 0,
@@ -45,12 +47,13 @@ function scrolledLeft(chart) {
 }
 
 function scrollRight(chart) {
+  document.getElementById('circleLeft').classList.remove('selector-choice')
+  document.getElementById('circleRight').classList.add('selector-choice')
   document.getElementById("my-skills").scrollTo({
   top: 0,
   left: 1000,
   behavior: 'smooth'
 });
-  chart.data.datasets.data = [];
   chart.data.labels = ['Ruby', 'Rails', 'Pyhon', 'Github', 'Matlab'];
   chart.data.datasets[0].data = [4, 3, 2, 4, 3];
   myRadarChart.update();
