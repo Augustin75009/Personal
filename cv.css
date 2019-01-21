@@ -228,6 +228,7 @@ body {
   position: relative;
   /*animation: backcolor 1s;*/
   animation-iteration-count: 1;
+  text-align: center;
   /*animation-fill-mode: forwards;*/
   /*animation-play-state: paused;*/
 }
@@ -240,7 +241,8 @@ body {
   /*display: flex;*/
   /*flex-direction: row;*/
   position: relative;
-  text-align: center;
+  /*text-align: center;*/
+  text-justify: inter-word;
   z-index: 20;
   /*overflow-x: hidden;*/
 }
@@ -394,17 +396,24 @@ body {
   border-radius: 5px;
   background-color: transparent;
   color: white;
-  padding-top: 10%;
+  padding-top: 12%;
 }
+
+.text-animated {
+  /*font-size: 28px;*/
+  text-indent: 10px;
+  text-justify: inter-character;
+}
+
 
 .my-description>h3 {
   font-size: 28px;
   text-align: center;
 }
 
-/*.wagon-batch {
+.wagon-batch {
   text-align: center;
-}*/
+}
 
 .avatar-icon {
   text-align: center;
@@ -414,75 +423,6 @@ body {
   width: 10%;
   border-top: 2px solid #eee;
 }
-
-/*.net-logo>img {
-  height: 40px;
-  width: 40px;
-}
-
-.logo-fb {
-  height: 50px !important;
-  width: 50px !important
-}
-
-.logo-linkedin {
-  height: 50px !important;
-  width: 50px !important
-}
-
-.net-logo {
-  display: inline;
-}*/
-
-
-
-/*
-#circleTop {
-  position: fixed;
-  bottom: 124;
-  right: 44;
-  z-index: 100;
-  height: 54px;
-  width: 54px;
-  border-radius: 50%;
-  border: solid 2px red;
-  z-index: 1;
-  animation : animaTop 1.2s;
-  animation-iteration-count: infinite;
-}*/
-
-/*#arrow-fixed-bottom:hover {
-  cursor: pointer;
-}
-#circleTop, #circleDown {
-  background-color: transparent;
-}
-
-#arrow-fixed-bottom, #arrow-fixed-top {
-  color: white;
-}*/
-
-/*#arrow-fixed-bottom {
-  z-index: 500;
-}*/
-
-/*#circleDown {
-  position: fixed;
-  bottom: 62;
-  right: 44;
-  z-index: 100;
-  height: 54px;
-  width: 54px;
-  border-radius: 50%;
-  border: solid 2px red;
-  z-index: 500;
-  animation : animaDown 1.2s;
-  animation-iteration-count: infinite;
-}
-
-#arrow-fixed-top:hover {
-  cursor: pointer;
-}*/
 
 
 .skills-interests>img {
@@ -504,7 +444,7 @@ body {
   position: fixed;
   bottom: 56;
   left: 44;
-  z-index: 100;
+  z-index: 350;
   height: 54px;
   width: 54px;
   border-radius: 50%;
@@ -523,24 +463,26 @@ body {
   position: fixed;
   bottom: 76;
   left: 50.5;
-  z-index: 1;
+  z-index: 3;
   height: 40px;
   width: 40px;
   border-radius: 50%;
   /*border: solid 2px red;*/
   visibility: hidden;
+  opacity: 0.9;
 }
 
 #widget-phone {
   position: fixed;
   bottom: 76;
   left: 50.5;
-  z-index: 1;
+  z-index: 2;
   height: 40px;
   width: 40px;
   border-radius: 50%;
   /*border: solid 2px red;*/
   visibility: hidden;
+  opacity: 0.9;
 }
 
 #widget-cv {
@@ -553,13 +495,14 @@ body {
   border-radius: 50%;
   /*border: solid 2px red;*/
   visibility: hidden;
+  opacity: 0.9;
 }
 
 #widget-close {
   position: fixed;
   bottom: 56;
   left: 44;
-  z-index: 99;
+  z-index: 352;
   height: 54px;
   width: 54px;
   border-radius: 50%;
@@ -658,7 +601,7 @@ body {
   }
 
   100% {
-    z-index: 101;
+    z-index: 351;
     visibility: visible;
     background-image: url(assets/close3.svg);
     background-size: cover;
@@ -792,6 +735,7 @@ body {
 
   .skills-description {
     width: 100%;
+    text-align: center;
   }
 }
 
@@ -852,6 +796,14 @@ body {
     width: 80px;
     border-radius: 50%;
     border: solid 3px white;
+  }
+}
+
+@media (min-width: 1400px) {
+
+  .about {
+    font-size: 17px !important;
+    width: 45%;
   }
 }
 
