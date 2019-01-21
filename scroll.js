@@ -1,11 +1,26 @@
 var height = window.top.innerHeight;
 
+
+window.addEventListener("wheel", function(event) {
+  console.log(event.pageY)
+  if (event.deltaY > 0 && event.pageY > height){
+    // console.log("let's bright")
+    document.getElementById("second-card").style.animation="backcolor 2s forwards";
+  }
+  if (event.deltaY < 0) {
+    // console.log("let's dark")
+    document.getElementById("second-card").style.animation="backcolord 0.9s forwards";
+  }
+  })
+
+
 function scrollUp() {
   window.scrollBy({
   top: -height,
   left: 0,
   behavior: 'smooth'
 });
+  // console.log("position=" + document.getElementById("second-card").scrollHeight);
 }
 
 function scrollDown() {
@@ -14,137 +29,120 @@ function scrollDown() {
   left: 0,
   behavior: 'smooth'
 });
+  // console.log("position=" + document.getElementById("second-card").offsetTop);
 }
 
-var derniere_position_de_scroll_connue = 0;
-var ticking = false;
+function scrolledLeft(chart) {
+  document.getElementById("my-skills").scrollTo({
+  top: 0,
+  left: 0,
+  behavior: 'smooth'
+});
+  chart.data.labels = ['CSS', 'HTML', 'JavaScript', 'JQuery', 'Design'];
+  console.log(chart.data.datasets[0].data[0])
+  chart.data.datasets[0].data = [4, 5, 4, 1, 3];
+  myRadarChart.update();
+}
 
-// function faitQuelquechose(position_scroll) {
-//   // faites quelque chose avec la position du scroll
-// }
+function scrollRight(chart) {
+  document.getElementById("my-skills").scrollTo({
+  top: 0,
+  left: 1000,
+  behavior: 'smooth'
+});
+  chart.data.datasets.data = [];
+  chart.data.labels = ['Ruby', 'Rails', 'Pyhon', 'Github', 'Matlab'];
+  chart.data.datasets[0].data = [4, 3, 2, 4, 3];
+  myRadarChart.update();
+}
 
-// window.addEventListener('wheel', function(e) {
-//   derniere_position_de_scroll_connue = window.scrollY;
-//   var height = window.top.innerHeight
-//   if (e.deltaY < 0) {
-//     height = -height;
-//   }
-//   console.log(e)
+function ScrollHandler(pageId) {
+  var page = document.getElementById(pageId);
+  var pageStart = page.offsetTop;
+  var pageJump = false;
+  var viewStart;
+  var duration = 1000;
+  var scrolled = document.getElementById("scroll");
 
-//   if (!ticking) {
-//     window.requestAnimationFrame(function() {
-//     window.scrollBy({
-//     top: height,
-//     left: 0,
-//     behavior: 'smooth'
-//     });
-//       faitQuelquechose(derniere_position_de_scroll_connue);
-//       ticking = false;
-//     });
-//   }
-//   ticking = true;
-// });
+  function scrollToPage() {
+    pageJump = true;
 
-// faitQuelquechose()
+    // Calculate how far to scroll
+    var startLocation = viewStart;
+    var endLocation = pageStart;
+    var distance = endLocation - startLocation;
 
+    var runAnimation;
 
+    // Set the animation variables to 0/undefined.
+    var timeLapsed = 0;
+    var percentage, position;
 
-// const clickable = document.querySelector("#clickable");
-// clickable.addEventListener("click", (event) => {
-//   console.log("hello")
-//   document.querySelector('.skills-hobbies').scrollIntoView({
-//     behavior: 'smooth'
-//   });
-// });
+    var easing = function(progress) {
+      return progress < 0.5
+        ? 4 * progress * progress * progress
+        : (progress - 1) * (2 * progress - 2) * (2 * progress - 2) + 1; // acceleration until halfway, then deceleration
+    };
 
-// const jump = calc("100vh")
+    function stopAnimationIfRequired(pos) {
+      if (pos == endLocation) {
+        cancelAnimationFrame(runAnimation);
+        setTimeout(function() {
+          pageJump = false;
+        }, 500);
+      }
+    }
 
-// function ScrollHandler(pageId) {
-//   var page = document.getElementById(pageId);
-//   var pageStart = page.offsetTop;
-//   var pageJump = false;
-//   var viewStart;
-//   var duration = 1000;
-//   var scrolled = document.getElementById("scroll");
+    var animate = function() {
+      timeLapsed += 16;
+      percentage = timeLapsed / duration;
+      if (percentage > 1) {
+        percentage = 1;
+        position = endLocation;
+      } else {
+        position = startLocation + distance * easing(percentage);
+      }
+      scrolled.scrollTop = position;
+      runAnimation = requestAnimationFrame(animate);
+      stopAnimationIfRequired(position);
+      // console.log("position=" + scrolled.scrollTop + "(" + percentage + ")");
+    };
+    // Loop the animation function
+    runAnimation = requestAnimationFrame(animate);
+  }
 
-//   function scrollToPage() {
-//     pageJump = true;
+  window.addEventListener("wheel", function(event) {
+    viewStart = scrolled.scrollTop;
+    if (!pageJump) {
+      var pageHeight = page.scrollHeight;
+      var pageStopPortion = pageHeight / 2;
+      var viewHeight = window.innerHeight;
 
-//     // Calculate how far to scroll
-//     var startLocation = viewStart;
-//     var endLocation = pageStart;
-//     var distance = endLocation - startLocation;
+      var viewEnd = viewStart + viewHeight;
+      var pageStartPart = viewEnd - pageStart;
+      var pageEndPart = pageStart + pageHeight - viewStart;
 
-//     var runAnimation;
+      var canJumpDown = pageStartPart >= 0;
+      var stopJumpDown = pageStartPart > pageStopPortion;
 
-//     // Set the animation variables to 0/undefined.
-//     var timeLapsed = 0;
-//     var percentage, position;
+      var canJumpUp = pageEndPart >= 0;
+      var stopJumpUp = pageEndPart > pageStopPortion;
 
-//     var easing = function(progress) {
-//       return progress < 0.5
-//         ? 4 * progress * progress * progress
-//         : (progress - 1) * (2 * progress - 2) * (2 * progress - 2) + 1; // acceleration until halfway, then deceleration
-//     };
+      var scrollingForward = event.deltaY > 0;
+      if (
+        (scrollingForward && canJumpDown && !stopJumpDown) ||
+        (!scrollingForward && canJumpUp && !stopJumpUp)
+      ) {
+        event.preventDefault();
+        scrollToPage();
+      }
+      false; //
+    } else {
+      event.preventDefault();
+    }
+  });
+}
+new ScrollHandler("banner");
+new ScrollHandler("first-card");
+new ScrollHandler("second-card");
 
-//     function stopAnimationIfRequired(pos) {
-//       if (pos == endLocation) {
-//         cancelAnimationFrame(runAnimation);
-//         setTimeout(function() {
-//           pageJump = false;
-//         }, 500);
-//       }
-//     }
-
-//     var animate = function() {
-//       timeLapsed += 16;
-//       percentage = timeLapsed / duration;
-//       if (percentage > 1) {
-//         percentage = 1;
-//         position = endLocation;
-//       } else {
-//         position = startLocation + distance * easing(percentage);
-//       }
-//       scrolled.scrollTop = position;
-//       runAnimation = requestAnimationFrame(animate);
-//       stopAnimationIfRequired(position);
-//       console.log("position=" + scrolled.scrollTop + "(" + percentage + ")");
-//     };
-//     // Loop the animation function
-//     runAnimation = requestAnimationFrame(animate);
-//   }
-
-//   window.addEventListener("wheel", function(event) {
-//     viewStart = scrolled.scrollTop;
-//     if (!pageJump) {
-//       var pageHeight = page.scrollHeight;
-//       var pageStopPortion = pageHeight / 2;
-//       var viewHeight = window.innerHeight;
-
-//       var viewEnd = viewStart + viewHeight;
-//       var pageStartPart = viewEnd - pageStart;
-//       var pageEndPart = pageStart + pageHeight - viewStart;
-
-//       var canJumpDown = pageStartPart >= 0;
-//       var stopJumpDown = pageStartPart > pageStopPortion;
-
-//       var canJumpUp = pageEndPart >= 0;
-//       var stopJumpUp = pageEndPart > pageStopPortion;
-
-//       var scrollingForward = event.deltaY > 0;
-//       if (
-//         (scrollingForward && canJumpDown && !stopJumpDown) ||
-//         (!scrollingForward && canJumpUp && !stopJumpUp)
-//       ) {
-//         event.preventDefault();
-//         scrollToPage();
-//       }
-//       false; //
-//     } else {
-//       event.preventDefault();
-//     }
-//   });
-// }
-// new ScrollHandler("one");
-// new ScrollHandler("two");
-// new ScrollHandler("three");

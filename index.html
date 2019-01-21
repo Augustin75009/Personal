@@ -18,16 +18,17 @@
 
   </head>
 
-  <body>
+  <body id="scroll">
       <div class="banner" id="banner">
           <ul id="scene"  class="scene">
             <li class="layer2" data-depth="0.15"><div class="layer"></div></li>
             <li class="layer3" data-depth="0.2"><div class="layer"></div></li>
             <li class="layer4" data-depth="0.1"><div class="layer"></div></li>
-            <li class="name" data-depth="0.3"></div></li>
+             <li class="astro2" data-depth="0.05"><div class="layer"></div></li>
+            <li class="name" data-depth="0.3"></li>
           </ul>
       </div>
-      <div class="first-card">
+      <div class="first-card" id="first-card">
         <ul id="scene-skills"  class="scene">
             <li class="layer2" data-depth="0.15"><div class="layer"></div></li>
             <li class="layer3" data-depth="0.2"><div class="layer"></div></li>
@@ -61,35 +62,35 @@
           </li>
           </ul>
       </div>
-      <div class="second-card">
+      <div class="second-card" id="second-card">
         <div class="skills-description">
-          <div class="my-skills">
-            <ul>
-              <li>
-                <div class="skills-packages-1">
-                  <div class="skills-card"><i class="devicon-ruby-plain-wordmark colored"></i></div>
-                  <div class="skills-card"><i class="devicon-css3-plain-wordmark colored"></i></div>
-                  <div class="skills-card"><i class="devicon-html5-plain-wordmark colored"></i></div>
-                  <div class="skills-card"><i class="devicon-javascript-plain-wordmark colored"></i></div>
-                  <div class="skills-card"><i class="devicon-bootstrap-plain-wordmark colored"></i></div>
-                </div>
-              </li>
-              <li>
-                <div class="skills-packages-2">
-                  <div class="skills-card"><i class="devicon-python-plain-wordmark colored"></i></div>
-                  <div class="skills-card"><i class="devicon-github-plain-wordmark"></i></div>
-                  <div class="skills-card"><i class="devicon-jquery-plain-wordmark colored"></i></div>
-                  <div class="skills-card"><i class="devicon-nodejs-plain colored"></i></div>
-                  <div class="skills-card"><i class="devicon-rails-plain-wordmark colored"></i></div>
-                  <div class="skills-card"><i class="devicon-trello-plain colored"></i></div>
-                </div>
-              </li>
-            </ul>
+          <div class="my-skills" id="my-skills">
+            <div class="skills-packages-1" id="skills-packages-1">
+              <div class="skills-card"><i class="devicon-css3-plain-wordmark colored"></i></div>
+              <div class="skills-card"><i class="devicon-html5-plain-wordmark colored"></i></div>
+              <div class="skills-card"><i class="devicon-nodejs-plain colored"></i></div>
+              <div class="skills-card"><i class="devicon-jquery-plain-wordmark colored"></i></div>
+              <div class="skills-card"><i class="devicon-bootstrap-plain-wordmark colored"></i></div>
+            </div>
+            <div class="skills-packages-2" id="skills-packages-2">
+              <div class="skills-card"><i class="devicon-ruby-plain-wordmark colored"></i></div>
+              <div class="skills-card"><i class="devicon-rails-plain-wordmark colored"></i></div>
+              <div class="skills-card"><i class="devicon-python-plain-wordmark colored"></i></div>
+              <div class="skills-card"><i class="devicon-github-plain-wordmark"></i></div>
+              <div class="skills-card">Matlab</div>
+            </div>
           </div>
+            <div class="skills-selector">
+              <div id="circleLeft">
+              <i onClick="scrolledLeft(myRadarChart)" id="arrow-fixed-left" class="fa fa-arrow-left fa-2x" aria-hidden="true"></i></div>
+              <div id="circleRight">
+              <i onClick="scrollRight(myRadarChart)" id="arrow-fixed-right" class="fa fa-arrow-right fa-2x" aria-hidden="true"></i></div>
+            </div>
         </div>
-          <div class="chart">
+
+        <div class="chart" id="chart-container">
            <canvas id="myChart"></canvas>
-          </div>
+        </div>
       </div>
 <!--         <ul id="scene-description"  class="scene">
             <li class="layer2bis" data-depth="0.15"><div class="layer"></div></li>
@@ -99,12 +100,12 @@
             <li class="layer" data-depth="0.05" style="width: 100%; margin: auto; right: 0%">
           </li>
         </ul> -->
-      <div class="top">
+      <!-- <div class="top">
         <div id="circleTop"></div>
         <i onClick="scrollUp()" id="arrow-fixed-top" class="fa fa-arrow-up fa-2x" aria-hidden="true"></i>
         <div id="circleDown"></div>
         <i onClick="scrollDown()" id="arrow-fixed-bottom" class="fa fa-arrow-down fa-2x" aria-hidden="true"></i>
-      </div>
+      </div> -->
        <div class="widget">
         <div id="widget-container">
           <div id="widget-mail" class="widget-mail">
