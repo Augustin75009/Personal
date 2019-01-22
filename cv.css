@@ -101,10 +101,43 @@ body {
   background : url(assets/astro.png);
   background-size: 35%;
   position: relative;
-  background-position: 90% 93%;
+  /*background-position: 90% 93%;*/
+  background-position: 90% 38vh;
   background-repeat: no-repeat;
 }
 
+.bulle {
+  width: 100% !important;
+  height: 50vh;
+  background : url(assets/bulle2.png);
+  background-size: 15%;
+  position: relative;
+  background-position: 81% 18vh;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation : animatebulle 20s 1s linear;
+  animation-iteration-count: 1;
+
+}
+
+@keyframes animatebulle {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+   opacity: 0;
+  }
+
+}
 
 
 @keyframes animated {
