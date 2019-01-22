@@ -223,7 +223,7 @@ body {
   z-index: 1;
   margin: auto;
   vertical-align: bottom;
-  border: solid 2px black;
+  /*border: solid 2px black;*/
   overflow: hidden;
   position: relative;
   /*animation: backcolor 1s;*/
@@ -807,18 +807,18 @@ body {
   }
 }
 
-@media (min-width: 1400px) {
+/*@media (min-width: 1400px) and (max-height: 811px){
 
   .about {
     font-size: 17px !important;
     width: 45%;
   }
-}
+}*/
 
 
 /*-----------Phones-----------------*/
 
-@media (max-width: 811px) and (max-width: 374px) {
+@media (max-height: 811px) and (max-width: 374px) {
 
   .name {
     background-size: cover;
