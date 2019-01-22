@@ -310,7 +310,7 @@ body {
   /*padding-top: 160px;*/
   /*border: solid 2px white;*/
   position: absolute;
-  bottom: 25%;
+  bottom: 30%;
   left: 0;
   height: 50px;
   display: flex;
@@ -704,13 +704,43 @@ body {
   }
 }
 
-@media (max-height: 500px) and (min-width: 1400px) {
+@media (max-height: 480px) and (min-width: 1000px) {
   #myChart.chartjs-render-monitor {
-    transform: scale(0.6);
+    /*transform: scale(0.6);*/
+    height: 90vh,
   }
   #chart-container {
     position: absolute;
     top: 10% !important;
+  }
+  .skills-card>i {
+    font-size: 55px !important;
+  }
+
+  #circleRight, #circleLeft {
+    transform: scale(0.8)
+  }
+
+  .my-skills {
+    padding-top: 30vh;
+  }
+}
+
+@media (max-height: 350px) and (min-width: 1000px) {
+  #myChart.chartjs-render-monitor {
+    /*transform: scale(0.6);*/
+    height: 100vh;
+  }
+  #chart-container {
+    position: absolute;
+    top: 1% !important;
+  }
+  .skills-card>i {
+    font-size: 50px !important;
+  }
+
+  #circleRight, #circleLeft {
+    transform: scale(0.6)
   }
 }
 
