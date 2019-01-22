@@ -278,7 +278,17 @@ body {
   text-justify: inter-word;
   z-index: 20;
   /*overflow-x: hidden;*/
+  /*text-align: center;*/
 }
+
+/*.skills-description>h3 {
+  position: absolute;
+  top: 28vh;
+  left: 21%;
+  font-size: 34px;
+  text-align: center
+  color: grey;
+}*/
 
 .my-skills {
   /*justify-content: center;*/
