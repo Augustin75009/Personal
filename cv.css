@@ -927,6 +927,16 @@ body {
   .my-description {
     font-size: 13px !important;
   }
+
+  #widget-container {
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+  }
+
+  li.layer {
+    width: 85% !important
+  }
 }
 
 /*@media (min-width: 1400px) and (max-height: 811px){
