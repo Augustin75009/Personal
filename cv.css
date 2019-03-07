@@ -667,7 +667,7 @@ body {
 
 .content-mail {
   margin-left: 48px;
-  margin-top: 10px;
+  margin-top: 8px;
   visibility: hidden;
 }
 
@@ -675,7 +675,7 @@ body {
   background: white;
   color: black;
   border-radius: 8px;
-  padding: 4px 8px;
+  padding: 10px 16px;
 }
 
 .content-mail.show-content {
@@ -686,7 +686,7 @@ body {
 
 .content-phone {
   margin-left: 48px;
-  margin-top: 10px;
+  margin-top: 8px;
   visibility: hidden;
 }
 
@@ -698,7 +698,7 @@ body {
 
 .content-cv {
   margin-left: 48px;
-  margin-top: 10px;
+  margin-top: 8px;
   visibility: hidden;
 }
 
@@ -928,18 +928,22 @@ body {
     font-size: 13px !important;
   }
 
-  #widget-container {
+/*  #widget-container {
     position: fixed;
     bottom: 30px;
     left: 30px;
   }
-
+*/
   li.layer {
     width: 85% !important;
   }
 
   li.astro, li.astro2, li.bulle {
     display: none !important;
+  }
+
+  .show-content>span {
+    padding: 12px 16px;
   }
 }
 
