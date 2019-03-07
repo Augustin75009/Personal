@@ -7,9 +7,8 @@ const contentMail = document.querySelector('.content-mail');
 const contentPhone = document.querySelector('.content-phone');
 const contentCv = document.querySelector('.content-cv');
 const contentClose = document.querySelector('.content-close');
+// const body = document.querySelector('#scroll');
 
-
-// console.log( widgetMail.classList.contains("show-widget"));
 
  widget.addEventListener('click', function() {
     widgetMail.classList.add("show-widget");
@@ -19,6 +18,7 @@ const contentClose = document.querySelector('.content-close');
     contentMail.classList.add("show-content");
     contentPhone.classList.add("show-content");
     contentCv.classList.add("show-content");
+    // body.classList.add("opacity");
 
 });
 
@@ -30,15 +30,5 @@ const contentClose = document.querySelector('.content-close');
     contentMail.classList.remove("show-content");
     contentPhone.classList.remove("show-content");
     contentCv.classList.remove("show-content");
+    // body.classList.remove("opacity");
 });
-
-
-//   if (widgetMail.classList.contains("show-widget") == true) {
-//     console.log("hello")
-
-//   } else {
-
-//     console.log( widgetMail.classList.contains("show-widget"));
-// });
-
-// }
