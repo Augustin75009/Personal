@@ -675,8 +675,8 @@ body {
 .show-content>span {
   background: white;
   color: black;
-  border-radius: 4%;
-  padding: 4px 4px;
+  border-radius: 8px;
+  padding: 4px 8px;
 }
 
 .content-mail.show-content {
