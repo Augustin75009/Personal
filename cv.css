@@ -858,6 +858,10 @@ body {
     position: absolute !important;
     left: -200px !important;
   }
+
+  .about {
+    padding-top: 30% !important;
+  }
 }
 
 @media (max-width: 700px) {
@@ -892,6 +896,18 @@ body {
 }
 
 @media  screen and (max-width: 420px) {
+
+  li.layer {
+    width: 85% !important;
+  }
+
+  li.astro, li.astro2, li.bulle {
+    display: none !important;
+  }
+
+  .show-content>span {
+    padding: 6px 6px;
+  }
 
   .avatar-icon>img {
     height: 100px !important;
@@ -928,32 +944,130 @@ body {
     font-size: 13px !important;
   }
 
-/*  #widget-container {
+  #widget-container {
     position: fixed;
     bottom: 30px;
     left: 30px;
   }
-*/
-  li.layer {
-    width: 85% !important;
+
+  #widget-close {
+    bottom: 30px;
+    left: 30px;
   }
 
-  li.astro, li.astro2, li.bulle {
-    display: none !important;
+  #widget-phone, #widget-cv, #widget-mail {
+    position: fixed;
+    bottom: 36;
+    left: 36;
   }
 
-  .show-content>span {
-    padding: 12px 16px;
+
+.widget-mail.show-widget {
+  animation : shoWidgetMail 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shoWidgetMail {
+  70% {
+    visibility: visible;
+    background-image: url(assets/gmail.svg);
+    background-size: cover;
+  }
+
+  100% {
+    bottom: 102;
+    left: 36;
+    visibility: visible;
+    background-image: url(assets/gmail.svg);
+    background-size: cover;
+    }
+  }
+
+.widget-phone.show-widget {
+  animation : shoWidgetPhone 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes shoWidgetPhone {
+  70% {
+    visibility: visible;
+    background-image: url(assets/phone-circle.svg);
+    background-size: cover;
+  }
+
+  100% {
+    bottom: 152;
+    left: 36;
+    visibility: visible;
+    background-image: url(assets/phone-circle.svg);
+    background-size: cover;
+
+    }
+  }
+
+.widget-cv.show-widget {
+  animation : shoWidgetCv 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  z-index: 361;
+}
+
+@keyframes shoWidgetCv {
+  70% {
+    visibility: visible;
+    background-image: url(assets/document.svg);
+    background-size: cover;
+  }
+
+  100% {
+    bottom: 202;
+    left: 36;
+    visibility: visible;
+    background-image: url(assets/document.svg);
+    background-size: cover;
+    }
   }
 }
 
-/*@media (min-width: 1400px) and (max-height: 811px){
+
+/*-----------------ipad pro------------------------*/
+
+@media (min-width: 1024px) and (max-height: 1366px){
 
   .about {
-    font-size: 17px !important;
-    width: 45%;
+    font-size: 22px !important;
+    width: 100%;
+    padding-top: 40%;
   }
-}*/
+
+  #scene>li.name {
+    background-size: 150%;
+    position: absolute;
+    left: -220px;
+  }
+
+  .skills-card>i {
+    font-size: 120px
+  }
+
+  .skills-selector {
+    width: 100%;
+    position: absolute;
+    bottom: 12vh;
+    transform: scale(1.5);
+  }
+
+  .my-skills {
+    padding-top: 65vh;
+  }
+
+  #widget-container {
+    transform: scale(1.5);
+  }
+}
 
 
 /*-----------Phones-----------------*/
