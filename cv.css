@@ -935,7 +935,11 @@ body {
   }
 
   li.layer {
-    width: 85% !important
+    width: 85% !important;
+  }
+
+  li.astro, li.astro2, li.bulle {
+    display: none !important;
   }
 }
 
