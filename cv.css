@@ -18,7 +18,6 @@ body {
   background-repeat: no-repeat;
 }
 
-
 .layer2 {
   width: 100%;
   height: 100vh;
@@ -731,7 +730,7 @@ body {
   }
 
  /* --------------@Media-------------------*/
-@media (max-height: 750px) and (max-width: 1000px) {
+/*@media (max-height: 750px) and (max-width: 1000px) {
   #myChart.chartjs-render-monitor {
     transform: scale(0.7);
   }
@@ -757,11 +756,10 @@ body {
   .my-skills {
     padding-top: 0vh !important;
   }
-}
+}*/
 
-@media (max-height: 480px) and (min-width: 1000px) {
+/*@media (max-height: 480px) and (min-width: 1000px) {
   #myChart.chartjs-render-monitor {
-    /*transform: scale(0.6);*/
     height: 90vh,
   }
   #chart-container {
@@ -783,7 +781,6 @@ body {
 
 @media (max-height: 350px) and (min-width: 1000px) {
   #myChart.chartjs-render-monitor {
-    /*transform: scale(0.6);*/
     height: 100vh;
   }
   #chart-container {
@@ -797,7 +794,7 @@ body {
   #circleRight, #circleLeft {
     transform: scale(0.6)
   }
-}
+}*/
 
 @media (max-width: 1050px) {
 
@@ -805,7 +802,7 @@ body {
     width: 100%;
     position: absolute;
     padding-top: 0;
-    top: 5%;
+    top: 15%;
     left: 0;
   }
 
@@ -819,7 +816,7 @@ body {
   .skills-selector {
     width: 100%;
     position: absolute;
-    bottom: 5vh;
+    bottom: 6vh;
   }
 
 
@@ -831,6 +828,10 @@ body {
     width: 100%;
     text-align: center;
   }
+
+  #scene>li.name {
+    background-size: 98%;
+  }
 }
 
 @media (max-width: 850px) {
@@ -841,7 +842,7 @@ body {
   }
 
   .skills-card>i {
-    font-size: 60px
+    font-size: 90px
   }
   .skills-description {
       width: 100%;
@@ -849,6 +850,13 @@ body {
   .avatar-icon>img {
     height: 140px;
     width: 140px;
+  }
+
+  .name {
+    width: 100% !important;
+    background-size: 150% !important;
+    position: absolute !important;
+    left: -200px !important;
   }
 }
 
@@ -864,7 +872,7 @@ body {
   .my-description>h3 {
     font-size: 20px !important;
   }
-  .name {
+  #scene>li>.name {
     background-size: 98%;
   }
 }
@@ -883,13 +891,41 @@ body {
   }
 }
 
-@media (max-width: 420px) {
+@media  screen and (max-width: 420px) {
 
   .avatar-icon>img {
-    height: 80px;
-    width: 80px;
+    height: 100px !important;
+    width: 100px !important;
     border-radius: 50%;
     border: solid 3px white;
+  }
+
+  .name {
+    width: 150% !important;
+    background-size: 150% !important;
+    position: absolute !important;
+    left: -200px !important;
+  }
+
+  .skills-selector {
+    width: 100%;
+    position: absolute;
+    bottom: 20vh;
+  }
+
+  .my-skills {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding-top: 55vh;
+  }
+
+  .my-description>h3 {
+    font-size: 17px !important;
+  }
+
+  .my-description {
+    font-size: 13px !important;
   }
 }
 
@@ -904,7 +940,7 @@ body {
 
 /*-----------Phones-----------------*/
 
-@media (max-height: 811px) and (max-width: 374px) {
+/*@media (max-height: 811px) and (max-width: 374px) {
 
   .name {
     background-size: cover;
@@ -915,5 +951,5 @@ body {
   }
 }
 
-
+*/
 /*---------------- END @media--------------------------------*/
