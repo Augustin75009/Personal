@@ -23,7 +23,6 @@ const contentClose = document.querySelector('.content-close');
 });
 
   widgetClose.addEventListener('click', function() {
-    console.log("hello")
     widgetMail.classList.remove("show-widget");
     widgetPhone.classList.remove("show-widget");
     widgetCv.classList.remove("show-widget");

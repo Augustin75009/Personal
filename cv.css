@@ -1,3 +1,7 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
 body {
   font-family: 'Montserrat', sans-serif !important;
   font-size: 17px !important;
@@ -571,7 +575,7 @@ body {
   }*/
 
 .widget-mail.show-widget {
-  animation : shoWidgetMail 1s;
+  animation : shoWidgetMail 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -593,7 +597,7 @@ body {
   }
 
 .widget-phone.show-widget {
-  animation : shoWidgetPhone 1s;
+  animation : shoWidgetPhone 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 
@@ -617,7 +621,7 @@ body {
   }
 
 .widget-cv.show-widget {
-  animation : shoWidgetCv 1s;
+  animation : shoWidgetCv 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   z-index: 361;
@@ -640,9 +644,10 @@ body {
   }
 
 .widget-close.show-widget {
-  animation : shoWidgetClose 1s;
+  animation : shoWidgetClose 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  transform: scale(1.02)
 }
 
 @keyframes shoWidgetClose {
@@ -665,6 +670,13 @@ body {
   margin-left: 48px;
   margin-top: 10px;
   visibility: hidden;
+}
+
+.show-content>span {
+  background: white;
+  color: black;
+  border-radius: 4%;
+  padding: 4px 4px;
 }
 
 .content-mail.show-content {

@@ -13,9 +13,9 @@ var myRadarChart = new Chart(ctx, {
   type: 'radar',
   data: {
     labels:
-      ['CSS', 'HTML', 'JavaScript', 'JQuery', 'Design'],
+      ['CSS', 'HTML', 'JavaScript', 'React', 'Design'],
     datasets: [{
-      data: [4, 5, 4, 1, 3],
+      data: [4, 5, 4, 3, 3],
       borderWidth: 1,
       borderColor: 'rgba(65, 156, 255, 0.9)',
       backgroundColor: 'rgba(0,255,0,0.5)',
